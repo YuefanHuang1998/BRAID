@@ -52,11 +52,13 @@ Run the script from the command line by providing the GFF3 annotation, Reference
 
 ### Example for test dataset
 `braid -r test.fasta -g test.gff3 -v test.vcf.gz`
-> * You should have three output files and one log file:
-> * variant_analysis_output.tsv
-> * variant_analysis_output.alignment.txt
-> * variant_analysis_output.sample.txt
-> * variant_analysis_output.log
+> ```
+> You should have three output files and one log file:
+> variant_analysis_output.tsv
+> variant_analysis_output.alignment.txt
+> variant_analysis_output.sample.txt
+> variant_analysis_output.log
+> ```
 
 ## Arguments Parameter Table
 | **Short** | **Long** | **Description** |       |
@@ -127,21 +129,26 @@ Detail information for Variant_Type
 Log information for splice sites mutations
 
 SITE_PRESERVED: The splice site is unaltered, with both its position and sequence conserved; normal splicing is expected.
-> * [transcript1] (strand +) Splice site 'GT' at 39 PRESERVED by mutation 1:44_TAAGTA>A.
-> *   `-` Original Window Seq  : GATGTCGTTAAG     - Mutated Window Seq  : GATGTCGTA.
+> ```
+> [transcript1] (strand +) Splice site 'GT' at 39 PRESERVED by mutation 1:44_TAAGTA>A.
+>   `-` Original Window Seq  : GATGTCGTTAAG     - Mutated Window Seq  : GATGTCGTA.
+> ```
 
 SITE_SHIFT: The splice site may move to a nearby position due to the variant, potentially altering the exon–intron boundary.
-> * WARNING - [transcript1] Splice site may SHIFT for mutation 1:44_TAAGTA>A.
-> *   `-` Splice Site          : 'AG' (Original genomic pos: 49)
-> *   `-` Mutation             : TAAGTA -> A (Genomic pos: 44)
-> *   `-` Window               : 1:42-53
-> *   `-` Original Window Seq  : GTTAAGTAGATG
-> *   `-` Mutated Window Seq   : GTAGATG
+> ```
+> WARNING - [transcript1] Splice site may SHIFT for mutation 1:44_TAAGTA>A.
+>   `-` Splice Site          : 'AG' (Original genomic pos: 49)
+>   `-` Mutation             : TAAGTA -> A (Genomic pos: 44)
+>   `-` Window               : 1:42-53
+>   `-` Original Window Seq  : GTTAAGTAGATG
+>   `-` Mutated Window Seq   : GTAGATG
+> ```
 
 SITE_DESTROYED: The splice site is disrupted or abolished by the variant, likely preventing normal splicing at this site.
-> *  [transcript1] (strand +) Splice site 'GT' at 78 DESTROYED by mutation 1:50_GATGATCGATCGATCGATCGATCGATCGG>GG. It was 'GT', became 'AT'.
-> *    `-` Original Window Seq  : TCGGTCGATCGA     - Mutated Window Seq  : TCGATCGA
-
+> ```
+>  [transcript1] (strand +) Splice site 'GT' at 78 DESTROYED by mutation 1:50_GATGATCGATCGATCGATCGATCGATCGG>GG. It was 'GT', became 'AT'.
+>    `-` Original Window Seq  : TCGGTCGATCGA     - Mutated Window Seq  : TCGATCGA
+> ```
 
 2. Alignment Visualization (.alignment.txt)
 A human-readable text file showing the pairwise alignment of the Reference vs. Alternative protein.
