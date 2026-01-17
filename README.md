@@ -5,7 +5,7 @@ Block Resolution and Annotation of integrated DNA
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-active-success)
 
-![braid logo](<img width="513" height="227" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />)
+<img width="513" height="227" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
 
 > **Analyze phased VCF data to predict variant effects on protein sequences for each haplotype.**
 
