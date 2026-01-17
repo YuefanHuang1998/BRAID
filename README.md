@@ -163,13 +163,15 @@ Use the Haplotype_ID to match the haplotype in the summary table.
 
 Example View:
 > ```
-> Haplotype_ID: 1
+> Haplotype_ID: transcript1:1
 > Gene: gene1 | mRNA: transcript1
-> Variant_Type: NoLOF | missense
+> Haplotype_Mutations: 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON]
+> Variant_Type: NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)|||deletion||||||||||||||
+> Protein_Changes: Del(5)S
 > Alignment:
 >   Ref: MSLASSANDMIDRSIDRSIDRSIDRS*
->        |||||*|||||||||||||||||||||
->   Alt: MSLASWANDMIDRSIDRSIDRSIDRS*
+>        |||| ||||||||||||||||||||||
+>   Alt: MSLA-SANDMIDRSIDRSIDRSIDRS*
 > ```
 
 **3. Sample Matrix (.sample.txt)**
