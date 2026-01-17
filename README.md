@@ -34,16 +34,16 @@ This tool is a software that requires standard bioinformatics libraries.
 **installation**
 
 Dowload by pip
-`pip install braid`
+> pip install braid
 
 Dowload by conda
-`conda install braid`
+> conda install braid
 
 Dowload by wget
-`Wget`
+> wget
 
 Dowload by git
-`git `
+> git
 
 Testing whether BRAID has been installed successfully：
 braid test
@@ -77,16 +77,17 @@ Run the script from the command line by providing the GFF3 annotation, Reference
 |  | **--ignore-intron** | Ignore variants marked strictly as intronic. | Optional |
 
 ## Output Files Explaination
-The tool generates three main files to assist in your analysis.
 
-1. Summary Table
+BRAID generates three main files to assist in your analysis.
+
+**1. Summary Table**
 
 A comprehensive table detailing the protein changes for every haplotype (default: variant_analysis_output.tsv).
 
 | Gene_ID | Haplotype_ID | mRNA | Haplotype_Count | Frequency | Variant_Type | Protein_Changes | Haplotype_Mutations | Sample_Sources | Ref_Protein | Alt_Protein | Ref_CDS | Alt_CDS | Aligned_Ref | Comparison_String | Aligned_Alt |
 |:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|
 | gene1 | transcript1:REF | transcript1 | . | . | NoLOF(non_identity_rate:0.00%,non_identical_AAs:0,total_ref_AAs:27) `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | . | . | . | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASSANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLASSANDMIDRSIDRSIDRSIDRS* |
-| gene1 | transcript1:1 | transcript1 | 4 | 0.500000 | NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)|||deletion `\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | Del(5)S | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | sample1(Hap2);sample2(Hap1);sample3(Homo) | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\| \|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLA-SANDMIDRSIDRSIDRSIDRS* |
+| gene1 | transcript1:1 | transcript1 | 4 | 0.500000 | NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)`\|\|\|`deletion `\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | Del(5)S | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | sample1(Hap2);sample2(Hap1);sample3(Homo) | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\| \|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLA-SANDMIDRSIDRSIDRSIDRS* |
 
 | **Column** | **Example** | **Explanation** |
 |:-----|:-----|:-------------|
@@ -107,7 +108,7 @@ A comprehensive table detailing the protein changes for every haplotype (default
 | **Comparison_String** | MSLASANDIDRSIDRS* | Alignment comparison symbols: `*` → Different amino acid, `\|` → Same amino acid. |
 | **Aligned_Alt** | MSLASANDIDRSIDRS* | Aligned alternative protein, shows amino acid changes: `-` → Gap (insertion or deletion). |
 
-Detail information for Variant_Type 
+**Detail information for Variant_Type**
 
 | **Column** | **Explanation** |
 |:-----|:-------------|
@@ -129,15 +130,15 @@ Detail information for Variant_Type
 | **ref_protein_empty** | The reference transcript does not produce a protein sequence (e.g., non-coding or incomplete annotation). |
 | **alignment_failed** | The reference and alternative protein sequences could not be reliably aligned, preventing accurate variant effect annotation. |
 
-Log information for splice sites mutations
+**Log information for splice sites mutations**
 
-SITE_PRESERVED: The splice site is unaltered, with both its position and sequence conserved; normal splicing is expected.
+**SITE_PRESERVED**: The splice site is unaltered, with both its position and sequence conserved; normal splicing is expected.
 > ```
 > [transcript1] (strand +) Splice site 'GT' at 39 PRESERVED by mutation 1:44_TAAGTA>A.
 >   - Original Window Seq  : GATGTCGTTAAG     - Mutated Window Seq  : GATGTCGTA.
 > ```
 
-SITE_SHIFT: The splice site may move to a nearby position due to the variant, potentially altering the exon–intron boundary.
+**SITE_SHIFT**: The splice site may move to a nearby position due to the variant, potentially altering the exon–intron boundary.
 > ```
 > WARNING - [transcript1] Splice site may SHIFT for mutation 1:44_TAAGTA>A.
 >   - Splice Site          : 'AG' (Original genomic pos: 49)
@@ -147,20 +148,20 @@ SITE_SHIFT: The splice site may move to a nearby position due to the variant, po
 >   - Mutated Window Seq   : GTAGATG
 > ```
 
-SITE_DESTROYED: The splice site is disrupted or abolished by the variant, likely preventing normal splicing at this site.
+**SITE_DESTROYED**: The splice site is disrupted or abolished by the variant, likely preventing normal splicing at this site.
 > ```
 >  [transcript1] (strand +) Splice site 'GT' at 78 DESTROYED by mutation 1:50_GATGATCGATCGATCGATCGATCGATCGG>GG. It was 'GT', became 'AT'.
 >    - Original Window Seq  : TCGGTCGATCGA     - Mutated Window Seq  : TCGATCGA
 > ```
 
-2. Alignment Visualization (.alignment.txt)
-A human-readable text file showing the pairwise alignment of the Reference vs. Alternative protein.
+**2. Alignment Visualization (.alignment.txt)**
+
+A text file showing the pairwise alignment of the Reference vs. Alternative protein.
+Use the Haplotype_ID to match the haplotype in the summary table.
 
 Example View:
-
-Plaintext
 > ```
-> Haplotype_Analysis_ID: 1
+> Haplotype_ID: 1
 > Gene: gene1 | mRNA: transcript1
 > Variant_Type: NoLOF | missense
 > Alignment:
@@ -169,9 +170,18 @@ Plaintext
 >   Alt: MSLASWANDMIDRSIDRSIDRSIDRS*
 > ```
 
-3. Sample Matrix (.sample.txt)
+**3. Sample Matrix (.sample.txt)**
+
 A matrix format ideal for heatmaps or downstream programmatic analysis.
 
 | Gene_ID | mRNA_ID | Ref_ID | Alt_IDs | sample1 | sample2 | sample3 |
 |:-----|:------|:------|:-----|:------|:------|:------|
 | gene1	| transcript1 |	transcript1:REF |	transcript1:1	| 0|1 |	1|0 | 1|1
+
+| **Column** | **Explanation** |
+|:-----|:-------------|
+| **Gene_ID** | The identifier of the gene being analyzed. |
+| **mRNA_ID** | The identifier of the specific transcript of that gene. |
+| **Ref_ID** | Reference haplotype ID, labeled as transcript:REF. |
+| **Alt_IDs** | Alternative haplotype IDs observed in the samples, with numbering to distinguish multiple haplotypes. |
+| **samples** | The haplotype presence/absence in each sample. Each entry corresponds to the Ref or Alt haplotype. `0` represents REF. |
