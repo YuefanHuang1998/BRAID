@@ -16,7 +16,6 @@ This allows for the detection of complex effects, such as:
 * **Haplotype-specific LOF:** Determining if a combination of missense mutations leads to a Loss of Function.
 * **Protein Structure Changes:** Visualizing the exact amino acid sequence changes (e.g., `Sub(6)S>W`).
 
-![Workflow Diagram](https://via.placeholder.com/800x300?text=Place+Your+Workflow+Diagram+Here)
 <div align="center">
 <img width="256.5" height="113.5" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
 </div>
