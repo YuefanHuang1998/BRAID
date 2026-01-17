@@ -105,7 +105,7 @@ Example View:
 | **Ref_Protein** | MSLASSANDIDRSIDRS* | Reference protein sequence. |
 | **Alt_Protein** | MSLASANDIDRSIDRS* | Alternative protein sequence. |
 | **Ref_CDS** | ATGAGCTTAGCTAGCTCAGCTAACGATATCG<br>ATCGATCGATCGATCGATCGTGA | Reference CDS sequence. |
-| **Alt_CDS** | ATGAGCCTAGCTTCAGCTAACGAT<br>ATCGATCGATCGATCGATCGATCGTGA | Haplotype-specific CDS sequence. |
+| **Alt_CDS** | ATGAGCCTAGCTTCAGCTAACGATATCG<br>ATCGATCGATCGATCGATCGTGA | Haplotype-specific CDS sequence. |
 | **Aligned_Ref** | MSLASSANDIDRSIDRS* | Aligned reference protein, protein alignment string for visualization: `-` → Gap (insertion or deletion). |
 | **Comparison_String** | MSLASANDIDRSIDRS* | Alignment comparison symbols: `*` → Different amino acid, `\|` → Same amino acid. |
 | **Aligned_Alt** | MSLASANDIDRSIDRS* | Aligned alternative protein, shows amino acid changes: `-` → Gap (insertion or deletion). |
