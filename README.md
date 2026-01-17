@@ -1,7 +1,6 @@
 <div align="center">
 <img width="256.5" height="113.5" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
 </div>
-
 # BRAID
 Block Resolution and Annotation of integrated DNA
 
