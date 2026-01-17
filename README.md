@@ -1,11 +1,10 @@
 # BRAID
+<img width="256.5" height="113.5" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
 Block Resolution and Annotation of integrated DNA
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-active-success)
-
-<img width="513" height="227" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
 
 > **Analyze phased VCF data to predict variant effects on protein sequences for each haplotype.**
 
