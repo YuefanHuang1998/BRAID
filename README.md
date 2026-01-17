@@ -1,6 +1,4 @@
-# BRAID
-
-<img width="128.25" height="56.75" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
+# BRAID <img width="128.25" height="56.75" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
 
 Block Resolution and Annotation of integrated DNA
 
