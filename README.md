@@ -26,38 +26,34 @@ This tool is a software that requires standard bioinformatics libraries.
 
 **Prerequisites:**
 > * Python 3.x
-> * `pysam` (for VCF/BAM handling)
-> * `biopython` (for sequence manipulation)
-> * `pandas` (for data tables)
+> * `pysam`
+> * `biopython`
 
 ## installation 
 
-### method 1
+Dowload by pip
 `pip install braid`
-
-### Method 2
+Dowload by conda
 `conda install braid`
-
-### Method 3
+Dowload by wget
 `Wget`
-
-### Method 4
+Dowload by git
 `git `
 
-### To test installation:
+Testing whether BRAID has been installed successfully：
 braid test
 
 ## Usage
 Run the script from the command line by providing the GFF3 annotation, Reference Genome, and Phased VCF.
 
-> braid -g annotation.gff3 -r reference.fa -v phased_variants.vcf.gz 
+`braid -r reference.fa -g annotation.gff3 -v phased_variants.vcf.gz`
 
 ### Example for test dataset
 `braid -r test.fasta -g test.gff3 -v test.vcf.gz`
-> You should have three output files: 
-> variant_analysis_output.tsv
-> variant_analysis_output.alignment.txt
-> variant_analysis_output.sample.txt
+> You should have three output files: \n
+> variant_analysis_output.tsv \n
+> variant_analysis_output.alignment.txt \n
+> variant_analysis_output.sample.txt \n
 > variant_analysis_output.log
 
 ## Arguments Parameter Table
@@ -86,7 +82,7 @@ A comprehensive table detailing the protein changes for every haplotype (default
 | gene1 | transcript1:1 | transcript1 | 4 | 0.500000 | NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)|||deletion `||||||||||||||` | Del(5)S | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | sample1(Hap2);sample2(Hap1);sample3(Homo) | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `|||| ||||||||||||||||||||||` | MSLA-SANDMIDRSIDRSIDRSIDRS* |
 
 | **Column** | **Example** | **Explanation** |
-|:-----|:------|:-------------|
+|:-----|:-----|:-------------|
 | **Gene_ID** | gene1 | The gene to which this haplotype belongs. |
 | **Haplotype_ID** | transcript1:REF;transcript1:1 | transcript:REF indicates the reference haplotype; others (e.g. transcript1:1) are alternative haplotypes. |
 | **mRNA** | transcript1 | The transcript to which this haplotype belongs. |
@@ -129,18 +125,20 @@ Detail information for Variant_Type
 Log information for splice sites mutations
 
 SITE_PRESERVED: The splice site is unaltered, with both its position and sequence conserved; normal splicing is expected.
-> [transcript1] (strand +) Splice site 'GT' at 39 PRESERVED by mutation 1:44_TAAGTA>A.
->   - Original Window Seq  : GATGTCGTTAAG     - Mutated Window Seq  : GATGTCGTA.
+`[transcript1] (strand +) Splice site 'GT' at 39 PRESERVED by mutation 1:44_TAAGTA>A.`
+`  - Original Window Seq  : GATGTCGTTAAG     - Mutated Window Seq  : GATGTCGTA.`
+
 SITE_SHIFT: The splice site may move to a nearby position due to the variant, potentially altering the exon–intron boundary.
-> WARNING - [transcript1] Splice site may SHIFT for mutation 1:44_TAAGTA>A.
->  - Splice Site          : 'AG' (Original genomic pos: 49)
->  - Mutation             : TAAGTA -> A (Genomic pos: 44)
->  - Window               : 1:42-53
->  - Original Window Seq  : GTTAAGTAGATG
->  - Mutated Window Seq   : GTAGATG
+`WARNING - [transcript1] Splice site may SHIFT for mutation 1:44_TAAGTA>A.`
+`  - Splice Site          : 'AG' (Original genomic pos: 49)`
+`  - Mutation             : TAAGTA -> A (Genomic pos: 44)`
+`  - Window               : 1:42-53`
+`  - Original Window Seq  : GTTAAGTAGATG`
+`  - Mutated Window Seq   : GTAGATG`
+
 SITE_DESTROYED: The splice site is disrupted or abolished by the variant, likely preventing normal splicing at this site.
-> [transcript1] (strand +) Splice site 'GT' at 78 DESTROYED by mutation 1:50_GATGATCGATCGATCGATCGATCGATCGG>GG. It was 'GT', became 'AT'.
->   - Original Window Seq  : TCGGTCGATCGA     - Mutated Window Seq  : TCGATCGA
+` [transcript1] (strand +) Splice site 'GT' at 78 DESTROYED by mutation 1:50_GATGATCGATCGATCGATCGATCGATCGG>GG. It was 'GT', became 'AT'.`
+`   - Original Window Seq  : TCGGTCGATCGA     - Mutated Window Seq  : TCGATCGA`
 
 
 2. Alignment Visualization (.alignment.txt)
@@ -149,13 +147,13 @@ A human-readable text file showing the pairwise alignment of the Reference vs. A
 Example View:
 
 Plaintext
-Haplotype_Analysis_ID: 1
-Gene: gene1 | mRNA: transcript1
-Variant_Type: NoLOF | missense
-Alignment:
-  Ref: MSLASSANDMIDRSIDRSIDRSIDRS*
-       |||||*|||||||||||||||||||||
-  Alt: MSLASWANDMIDRSIDRSIDRSIDRS*
+`Haplotype_Analysis_ID: 1`
+`Gene: gene1 | mRNA: transcript1`
+`Variant_Type: NoLOF | missense`
+`Alignment:`
+`  Ref: MSLASSANDMIDRSIDRSIDRSIDRS*`
+`       |||||*|||||||||||||||||||||`
+`  Alt: MSLASWANDMIDRSIDRSIDRSIDRS*`
 3. Sample Matrix (.sample.txt)
 A matrix format ideal for heatmaps or downstream programmatic analysis.
 
