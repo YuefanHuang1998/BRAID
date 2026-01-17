@@ -181,7 +181,7 @@ A matrix format ideal for heatmaps or downstream programmatic analysis.
 Example View:
 | Gene_ID | mRNA_ID | Ref_ID | Alt_IDs | sample1 | sample2 | sample3 |
 |:-----|:------|:------|:-----|:------|:------|:------|
-| gene1	| transcript1 |	transcript1:REF |	transcript1:1	| 0|1 |	1|0 | 1|1
+| gene1	| transcript1 |	transcript1:REF |	transcript1:1	| 0`\|`1 |	1`\|`0 | 1`\|`1 |
 
 | **Column** | **Explanation** |
 |:-----|:-------------|
