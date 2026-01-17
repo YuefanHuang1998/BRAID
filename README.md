@@ -98,10 +98,10 @@ Example View:
 | **mRNA** | transcript1 | The transcript to which this haplotype belongs. |
 | **Haplotype_Count** | 4 | Number of samples carrying this haplotype. |
 | **Frequency** | 0.500000 | Population frequency of this haplotype. |
-| **Variant_Type** | LOF/NoLoF (Please see the detailed information below.) | Functional classification of the haplotype	and indicates LOF status. |
+| **Variant_Type** | LOF/NoLoF (Please see <br>the detailed information below.) | Functional classification of the haplotype	and indicates LOF status. |
 | **Protein_Changes** | Del(5)S | Protein-level consequence	HGVS format description. |
-| **Haplotype_Mutations** | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | List of variants defining the haplotype. |
-| **Sample_Sources** | sample1(Hap2);sample2(Hap1);sample3(Homo) | Samples carrying this haplotype, including haplotype phase (Hap1, Hap2) or homozygous status (Homo). |
+| **Haplotype_Mutations** | 1:17_CTTAG>C[CDS,EXON];<br>1:27_T>TT[CDS,EXON] | List of variants defining the haplotype. |
+| **Sample_Sources** | sample1(Hap2);sample2(Hap1);<br>sample3(Homo) | Samples carrying this haplotype, including haplotype phase (Hap1, Hap2) or homozygous status (Homo). |
 | **Ref_Protein** | MSLASSANDIDRSIDRS* | Reference protein sequence. |
 | **Alt_Protein** | MSLASANDIDRSIDRS* | Alternative protein sequence. |
 | **Ref_CDS** | ATGAGCTTAGCTAGCTCAGCTAACGATATCG<br>ATCGATCGATCGATCGATCGTGA | Reference CDS sequence. |
