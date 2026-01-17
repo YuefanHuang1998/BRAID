@@ -1,5 +1,7 @@
 # BRAID
-<img width="256.5" height="113.5" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
+
+<img width="128.25" height="56.75" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
+
 Block Resolution and Annotation of integrated DNA
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
