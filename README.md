@@ -5,7 +5,7 @@ Block Resolution and Annotation of integrated DNA
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-active-success)
 
-![alt text](path/to/image.png)
+![braid logo](<img width="513" height="227" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />)
 
 > **Analyze phased VCF data to predict variant effects on protein sequences for each haplotype.**
 
@@ -27,7 +27,7 @@ This allows for the detection of complex effects, such as:
 This tool is a software that requires standard bioinformatics libraries.
 
 **Prerequisites:**
-> * Python 3.x
+> * Python >= 3.8
 > * `pysam`
 > * `biopython`
 
@@ -46,7 +46,7 @@ Dowload by git
 > git
 
 Testing whether BRAID has been installed successfully：
-braid test
+> braid test
 
 ## Usage
 Run the script from the command line by providing the GFF3 annotation, Reference Genome, and Phased VCF.
@@ -84,10 +84,13 @@ BRAID generates three main files to assist in your analysis.
 
 A comprehensive table detailing the protein changes for every haplotype (default: variant_analysis_output.tsv).
 
+Example View:
 | Gene_ID | Haplotype_ID | mRNA | Haplotype_Count | Frequency | Variant_Type | Protein_Changes | Haplotype_Mutations | Sample_Sources | Ref_Protein | Alt_Protein | Ref_CDS | Alt_CDS | Aligned_Ref | Comparison_String | Aligned_Alt |
 |:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|
 | gene1 | transcript1:REF | transcript1 | . | . | NoLOF(non_identity_rate:0.00%,non_identical_AAs:0,total_ref_AAs:27) `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | . | . | . | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASSANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLASSANDMIDRSIDRSIDRSIDRS* |
 | gene1 | transcript1:1 | transcript1 | 4 | 0.500000 | NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)`\|\|\|`deletion `\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | Del(5)S | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | sample1(Hap2);sample2(Hap1);sample3(Homo) | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\| \|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLA-SANDMIDRSIDRSIDRSIDRS* |
+
+**Explanation for each column**
 
 | **Column** | **Example** | **Explanation** |
 |:-----|:-----|:-------------|
@@ -174,6 +177,7 @@ Example View:
 
 A matrix format ideal for heatmaps or downstream programmatic analysis.
 
+Example View:
 | Gene_ID | mRNA_ID | Ref_ID | Alt_IDs | sample1 | sample2 | sample3 |
 |:-----|:------|:------|:-----|:------|:------|:------|
 | gene1	| transcript1 |	transcript1:REF |	transcript1:1	| 0|1 |	1|0 | 1|1
