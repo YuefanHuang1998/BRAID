@@ -31,14 +31,17 @@ This tool is a software that requires standard bioinformatics libraries.
 > * `pysam`
 > * `biopython`
 
-## installation 
+**installation**
 
 Dowload by pip
 `pip install braid`
+
 Dowload by conda
 `conda install braid`
+
 Dowload by wget
 `Wget`
+
 Dowload by git
 `git `
 
@@ -83,7 +86,7 @@ A comprehensive table detailing the protein changes for every haplotype (default
 | Gene_ID | Haplotype_ID | mRNA | Haplotype_Count | Frequency | Variant_Type | Protein_Changes | Haplotype_Mutations | Sample_Sources | Ref_Protein | Alt_Protein | Ref_CDS | Alt_CDS | Aligned_Ref | Comparison_String | Aligned_Alt |
 |:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|
 | gene1 | transcript1:REF | transcript1 | . | . | NoLOF(non_identity_rate:0.00%,non_identical_AAs:0,total_ref_AAs:27) `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | . | . | . | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASSANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLASSANDMIDRSIDRSIDRSIDRS* |
-| gene1 | transcript1:1 | transcript1 | 4 | 0.500000 | NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)|||deletion `||||||||||||||` | Del(5)S | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | sample1(Hap2);sample2(Hap1);sample3(Homo) | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\| \|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLA-SANDMIDRSIDRSIDRSIDRS* |
+| gene1 | transcript1:1 | transcript1 | 4 | 0.500000 | NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)|||deletion `\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | Del(5)S | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | sample1(Hap2);sample2(Hap1);sample3(Homo) | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\| \|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLA-SANDMIDRSIDRSIDRSIDRS* |
 
 | **Column** | **Example** | **Explanation** |
 |:-----|:-----|:-------------|
