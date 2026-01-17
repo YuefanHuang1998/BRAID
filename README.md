@@ -121,9 +121,9 @@ Example View:
 | **complex_indel** | A combined insertion and deletion event that cannot be represented as a simple insertion or deletion and may cause complex changes to the coding sequence. |
 | **complex_indel** | A splicing event in which one or more exons are completely skipped in the transcript, leading to an altered mRNA and protein sequence. |
 | **exon_skip** | A splicing event in which one or more exons are completely skipped in the transcript, leading to an altered mRNA and protein sequence. |
-| **skipped_exons_detail** | Detailed information specifying which exon is skipped in the exon-skipping event, SITE_PRESERVED, SITE_SHIFT, SITE_DESTROYED. e.g., SkippedExon:[1:51-77|SITE_SHIFT]. |
+| **skipped_exons_detail** | Detailed information specifying which exon is skipped in the exon-skipping event, SITE_PRESERVED, SITE_SHIFT, SITE_DESTROYED. e.g., SkippedExon:[1:51-77`\|`SITE_SHIFT]. |
 | **intron_retention** | A splicing event in which one or more introns are retained in the mature transcript, potentially disrupting the coding sequence. |
-| **retained_introns_detail** | Detailed information specifying which intron(s) are retained in the intron-retention event, SITE_PRESERVED, SITE_SHIFT, SITE_DESTROYED. e.g., RetainedIntron:[1:78-90|SITE_DESTROYED]. |
+| **retained_introns_detail** | Detailed information specifying which intron(s) are retained in the intron-retention event, SITE_PRESERVED, SITE_SHIFT, SITE_DESTROYED. e.g., RetainedIntron:[1:78-90`\|`SITE_DESTROYED]. |
 | **start_codon_loss** | A variant that disrupts the canonical start codon, potentially preventing translation initiation. |
 | **stop_loss** | A variant that removes or alters the stop codon, resulting in translational read-through and an extended protein. |
 | **No_start_codon_for_reference** | The reference transcript or protein sequence lacks an annotated start codon. |
