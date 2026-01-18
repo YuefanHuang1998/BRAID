@@ -1,5 +1,5 @@
 # BRAID
-Block Resolution and Annotation of integrated DNA
+**Block Resolution and Annotation of integrated DNA**
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -88,6 +88,12 @@ Example View:
 |:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|
 | gene1 | transcript1:REF | transcript1 | . | . | NoLOF(non_identity_rate:0.00%,non_identical_AAs:0,total_ref_AAs:27) `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | . | . | . | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASSANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLASSANDMIDRSIDRSIDRSIDRS* |
 | gene1 | transcript1:1 | transcript1 | 4 | 0.500000 | NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)`\|\|\|`deletion `\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | Del(5)S | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | sample1(Hap2);sample2(Hap1);sample3(Homo) | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\| \|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLA-SANDMIDRSIDRSIDRSIDRS* |
+
+>```
+> Gene_ID Haplotype_ID    mRNA    Haplotype_Count Frequency       Variant_Type    Protein_Changes     Haplotype_Mutations     Sample_Sources  Ref_Protein     Alt_Protein         Ref_CDS Alt_CDS Aligned_Ref     Comparison_String       Aligned_Alt
+> gene1   transcript1:REF transcript1     .       .       NoLOF(non_identity_rate:0.00%,non_identical_AAs:0,total_ref_AAs:27)|||||||||||||||||        .       .       .           MSLASSANDMIDRSIDRSIDRSIDRS*     MSLASSANDMIDRSIDRSIDRSIDRS*     ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA   ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA   MSLASSANDMIDRSIDRSIDRSIDRS* |||||||||||||||||||||||||||     MSLASSANDMIDRSIDRSIDRSIDRS*
+> gene1   transcript1:1   transcript1     4       0.500000        NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)|||deletion||||||||||||||        Del(5)S     1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON]      sample1(Hap2);sample2(Hap1);sample3(Homo)   MSLASSANDMIDRSIDRSIDRSIDRS*     MSLASANDMIDRSIDRSIDRSIDRS*      ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA   ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA      MSLASSANDMIDRSIDRSIDRSIDRS* |||| ||||||||||||||||||||||     MSLA-SANDMIDRSIDRSIDRSIDRS*
+>```
 
 **Explanation for each column**
 
@@ -182,6 +188,11 @@ Example View:
 | Gene_ID | mRNA_ID | Ref_ID | Alt_IDs | sample1 | sample2 | sample3 |
 |:-----|:------|:------|:-----|:------|:------|:------|
 | gene1	| transcript1 |	transcript1:REF |	transcript1:1	| 0`\|`1 |	1`\|`0 | 1`\|`1 |
+
+>```
+> Gene_ID  mRNA_ID      Ref_ID           Alt_IDs         sample1 sample2 sample3
+> gene1    transcript1  transcript1:REF  transcript1:1	   0|1	   1|0     1|1
+>```
 
 | **Column** | **Explanation** |
 |:-----|:-------------|
