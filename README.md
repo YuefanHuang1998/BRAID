@@ -23,7 +23,7 @@ This allows for the detection of complex effects, such as:
 
 ## Installation & Requirements
 
-This tool is a software that requires standard bioinformatics libraries.
+BRAID is a software that requires standard bioinformatics libraries.
 
 **Prerequisites:**
 > * Python >= 3.8
@@ -48,7 +48,7 @@ Testing whether BRAID has been installed successfully：
 > braid test
 
 ## Usage
-Run the script from the command line by providing the GFF3 annotation, Reference Genome, and Phased VCF.
+**Run the script from the command line by providing the GFF3 annotation, Reference Genome, and Phased VCF.**
 
 `braid -r reference.fa -g annotation.gff3 -v phased_variants.vcf.gz`
 
@@ -77,7 +77,7 @@ Run the script from the command line by providing the GFF3 annotation, Reference
 
 ## Output Files Explaination
 
-BRAID generates three main files to assist in your analysis.
+**BRAID generates three main files to assist in your analysis.**
 
 **1. Summary Table**
 
@@ -88,12 +88,6 @@ Example View:
 |:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|:------|:------|:-----|
 | gene1 | transcript1:REF | transcript1 | . | . | NoLOF(non_identity_rate:0.00%,non_identical_AAs:0,total_ref_AAs:27) `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | . | . | . | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASSANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLASSANDMIDRSIDRSIDRSIDRS* |
 | gene1 | transcript1:1 | transcript1 | 4 | 0.500000 | NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)`\|\|\|`deletion `\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | Del(5)S | 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON] | sample1(Hap2);sample2(Hap1);sample3(Homo) | MSLASSANDMIDRSIDRSIDRSIDRS* | MSLASANDMIDRSIDRSIDRSIDRS* | ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA | MSLASSANDMIDRSIDRSIDRSIDRS* | `\|\|\|\| \|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|\|` | MSLA-SANDMIDRSIDRSIDRSIDRS* |
-
->```
-> Gene_ID Haplotype_ID    mRNA    Haplotype_Count Frequency       Variant_Type    Protein_Changes     Haplotype_Mutations     Sample_Sources  Ref_Protein     Alt_Protein         Ref_CDS Alt_CDS Aligned_Ref     Comparison_String       Aligned_Alt
-> gene1   transcript1:REF transcript1     .       .       NoLOF(non_identity_rate:0.00%,non_identical_AAs:0,total_ref_AAs:27)|||||||||||||||||        .       .       .           MSLASSANDMIDRSIDRSIDRSIDRS*     MSLASSANDMIDRSIDRSIDRSIDRS*     ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA   ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA   MSLASSANDMIDRSIDRSIDRSIDRS* |||||||||||||||||||||||||||     MSLASSANDMIDRSIDRSIDRSIDRS*
-> gene1   transcript1:1   transcript1     4       0.500000        NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)|||deletion||||||||||||||        Del(5)S     1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON]      sample1(Hap2);sample2(Hap1);sample3(Homo)   MSLASSANDMIDRSIDRSIDRSIDRS*     MSLASANDMIDRSIDRSIDRSIDRS*      ATGAGCTTAGCTAGCTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA   ATGAGCCTAGCTTCAGCTAACGATATGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGTGA      MSLASSANDMIDRSIDRSIDRSIDRS* |||| ||||||||||||||||||||||     MSLA-SANDMIDRSIDRSIDRSIDRS*
->```
 
 **Explanation for each column**
 
@@ -142,8 +136,8 @@ Example View:
 
 **SITE_PRESERVED**: The splice site is unaltered, with both its position and sequence conserved; normal splicing is expected.
 > ```
-> [transcript1] (strand +) Splice site 'GT' at 39 PRESERVED by mutation 1:44_TAAGTA>A.
->   - Original Window Seq  : GATGTCGTTAAG     - Mutated Window Seq  : GATGTCGTA.
+> [transcript1] (strand +) Splice site 'GT' at 39 PRESERVED by mutation 1:39_GTCG>G.
+>   - Original Window Seq  : GATGTCGTTAAG     - Mutated Window Seq  : GATGTTAAG.
 > ```
 
 **SITE_SHIFT**: The splice site may move to a nearby position due to the variant, potentially altering the exon–intron boundary.
@@ -191,7 +185,7 @@ Example View:
 
 >```
 > Gene_ID  mRNA_ID      Ref_ID           Alt_IDs         sample1 sample2 sample3
-> gene1    transcript1  transcript1:REF  transcript1:1	   0|1	   1|0     1|1
+> gene1    transcript1  transcript1:REF  transcript1:1	  0|1	    1|0     1|1
 >```
 
 | **Column** | **Explanation** |
