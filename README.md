@@ -17,7 +17,7 @@ This allows for the detection of complex effects, such as:
 * **Protein Structure Changes:** Visualizing the exact amino acid sequence changes.
 
 <div align="center">
-<img width="256.5" height="113.5" alt="Image" src="https://github.com/user-attachments/assets/a6de6850-9514-49ec-b27c-23060dae8465" />
+<img width="1017" height="430" alt="Image" src="https://github.com/user-attachments/assets/55e71e73-1e83-44f2-9f62-187104f54523" />
 </div>
 
 
