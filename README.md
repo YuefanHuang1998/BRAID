@@ -195,3 +195,8 @@ Example View:
 | **Ref_ID** | Reference haplotype ID, labeled as transcript:REF. |
 | **Alt_IDs** | Alternative haplotype IDs observed in the samples, with numbering to distinguish multiple haplotypes. |
 | **samples** | The haplotype presence/absence in each sample. Each entry corresponds to the Ref or Alt haplotype. `0` represents REF. |
+
+## Citation
+
+If you use BRAID in your research, please cite our paper:
+> *   
