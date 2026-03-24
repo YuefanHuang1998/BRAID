@@ -1,0 +1,15 @@
+1	ensembl	gene	2	117	.	+	.	ID=gene1;biotype=protein_coding;gene_id=gene1
+1	ensembl	mRNA	2	117	.	+	.	ID=transcript1;Parent=gene1;biotype=protein_coding;transcript_id=transcript1
+1	ensembl	five_prime_UTR	2	11	.	+	.	Parent=transcript1
+1	ensembl	exon	2	38	.	+	.	Parent=transcript1;Name=exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=exon1;rank=1;version=1
+1	ensembl	CDS	12	38	.	+	0	ID=CDS:protein1;Parent=transcript1;protein_id=protein1
+1	ensembl	exon	51	77	.	+	.	Parent=transcript1;Name=exon2;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=exon2;rank=2;version=1
+1	ensembl	CDS	51	77	.	+	0	ID=CDS:protein1;Parent=transcript1;protein_id=protein1
+1	ensembl	exon	91	117	.	+	.	Parent=transcript1;Name=exon3;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=exon3;rank=3;version=1
+1	ensembl	CDS	91	117	.	+	0	ID=CDS:protein1;Parent=transcript1;protein_id=protein1
+1	ensembl	mRNA	2	77	.	+	.	ID=transcript2;Parent=gene1;biotype=protein_coding;transcript_id=transcript2
+1	ensembl	five_prime_UTR	2	11	.	+	.	Parent=transcript1
+1	ensembl	exon	2	38	.	+	.	Parent=transcript2;Name=exon1;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=exon1;rank=1;version=1
+1	ensembl	CDS	12	38	.	+	0	ID=CDS:protein2;Parent=transcript2;protein_id=protein2
+1	ensembl	exon	91	117	.	+	.	Parent=transcript2;Name=exon3;constitutive=1;ensembl_end_phase=0;ensembl_phase=0;exon_id=exon3;rank=2;version=1
+1	ensembl	CDS	91	117	.	+	0	ID=CDS:protein2;Parent=transcript2;protein_id=protein2

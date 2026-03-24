@@ -1,0 +1,20 @@
+Haplotype_ID: transcript1:1
+Gene: gene1 | mRNA: transcript1
+Haplotype_Mutations: 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON]
+Variant_Type: NoLOF(non_identity_rate:3.70%,non_identical_AAs:1,total_ref_AAs:27)|||deletion||||||||||||||
+Protein_Changes: Del(5)S
+Alignment:
+  Ref: MSLASSANDMIDRSIDRSIDRSIDRS*
+       |||| ||||||||||||||||||||||
+  Alt: MSLA-SANDMIDRSIDRSIDRSIDRS*
+
+Haplotype_ID: transcript2:1
+Gene: gene1 | mRNA: transcript2
+Haplotype_Mutations: 1:17_CTTAG>C[CDS,EXON];1:27_T>TT[CDS,EXON]
+Variant_Type: NoLOF(non_identity_rate:5.56%,non_identical_AAs:1,total_ref_AAs:18)|||deletion||||||||||||||
+Protein_Changes: Del(5)S
+Alignment:
+  Ref: MSLASSANDIDRSIDRS*
+       |||| |||||||||||||
+  Alt: MSLA-SANDIDRSIDRS*
+
