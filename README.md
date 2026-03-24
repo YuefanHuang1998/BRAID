@@ -39,8 +39,8 @@ Dowload by conda
 > conda install braid
 
 Dowload by wget
-> wget
-
+> wget [
+](https://github.com/YuefanHuang1998/BRAID/archive/refs/tags/v1.0.0.tar.gz)
 Dowload by git
 > git
 
