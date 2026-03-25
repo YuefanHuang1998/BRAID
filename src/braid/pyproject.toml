@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "BRAID"
+version = "1.0.0"
+description = "Block Resolution and Annotation of Integrated DNA"
+authors = [
+  { name = "Yuefan Huang" },
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pysam>=0.17.0",
+    "biopython>=1.80",
+]
+
+[project.scripts]
+braid = "braid.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.setuptools.package-data]
+braid = ["data/*"]
