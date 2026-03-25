@@ -33,10 +33,14 @@ BRAID is a software that requires standard bioinformatics libraries.
 **installation**
 
 **Dowload via pip**
+> ```
 > pip install braid
+> ```
 
 **Dowload via conda**
+>```
 > conda install braid
+>```
 
 **Dowload via wget**
 > ```
