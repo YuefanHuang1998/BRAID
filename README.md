@@ -44,9 +44,9 @@ BRAID is a software that requires standard bioinformatics libraries.
 
 **Dowload via wget**
 > ```
-> wget https://github.com/YuefanHuang1998/BRAID/archive/refs/tags/braid-v1.0.1.tar.gz
-> tar -zxvf braid-v1.0.1
-> cd BRAID-1.0.1/
+> wget https://github.com/YuefanHuang1998/BRAID/archive/refs/tags/v1.0.2.tar.gz
+> tar -xvf v1.0.2.tar.gz
+> cd BRAID-1.0.2/
 > pip install .
 > ```
 
