@@ -10,6 +10,7 @@ from .protein import ProteinAnalyzer
 from .genome import GenomeProcessor
 from .vcf import VCFProcessor
 from .output import ResultsOutputter
+from .version import FancyVersionAction
 
 try:
     from importlib import resources
@@ -55,6 +56,7 @@ def main(args_list=None):
     parser.add_argument('--gene', help='Path to file with specific gene IDs to analyze (one per line, no header).') 
     parser.add_argument('--lof-threshold', type=float, default=0.30, help="LOF classification threshold.")
     parser.add_argument('--resume', action='store_true', help='Resume from the last successfully processed gene found in the log.')
+    parser.add_argument('--version', nargs=0, action=FancyVersionAction, help='Show advanced version and environment information.')
 
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
     parser_test = subparsers.add_parser("test", help="Run tests using built-in data.")

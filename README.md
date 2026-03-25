@@ -32,32 +32,19 @@ BRAID is a software that requires standard bioinformatics libraries.
 
 **installation**
 
-**Dowload via pip**
-> ```
-> pip install pybraid
-> ```
+Dowload by pip
+> pip install braid
 
-**Dowload via conda**
-> ```
-> conda install -c bioconda braid
-> ```
+Dowload by conda
+> conda install braid
 
-**Dowload via wget**
-> ```
-> wget https://github.com/YuefanHuang1998/BRAID/archive/refs/tags/braid-v1.0.1.tar.gz
-> tar -zxvf braid-v1.0.1
-> cd BRAID-1.0.1/
-> pip install .
-> ```
+Dowload by wget
+> wget
 
-**Dowload via git**
-> ```
-> git clone https://github.com/YuefanHuang1998/BRAID.git
-> cd BRAID
-> pip install .
-> ```
+Dowload by git
+> git
 
-**To verify the installation was successful, run:**
+Testing whether BRAID has been installed successfully：
 > braid test
 
 ## Usage
@@ -207,6 +194,11 @@ Example View:
 | **Ref_ID** | Reference haplotype ID, labeled as transcript:REF. |
 | **Alt_IDs** | Alternative haplotype IDs observed in the samples, with numbering to distinguish multiple haplotypes. |
 | **samples** | The haplotype presence/absence in each sample. Each entry corresponds to the Ref or Alt haplotype. `0` represents REF. |
+
+## Citation
+
+If you use BRAID in your research, please cite our paper:
+> *   
 
 ## Citation
 
