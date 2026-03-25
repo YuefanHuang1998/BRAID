@@ -39,7 +39,7 @@ BRAID is a software that requires standard bioinformatics libraries.
 
 **Dowload via conda**
 >```
-> conda install braid
+> conda install -c bioconda braid
 >```
 
 **Dowload via wget**
