@@ -32,19 +32,24 @@ BRAID is a software that requires standard bioinformatics libraries.
 
 **installation**
 
-Dowload by pip
+**Dowload via pip**
 > pip install braid
 
-Dowload by conda
+**Dowload via conda**
 > conda install braid
 
-Dowload by wget
-> wget https://github.com/YuefanHuang1998/BRAID/archive/refs/tags/v1.0.0.tar.gz
+**Dowload via wget**
+> wget https://github.com/YuefanHuang1998/BRAID/archive/refs/tags/braid-v1.0.1.tar.gz
+> tar -zxvf braid-v1.0.1
+> cd BRAID-1.0.1/
+> pip install .
 
-Dowload by git
-> git
+**Dowload via git**
+> git clone https://github.com/YuefanHuang1998/BRAID.git
+> cd BRAID
+> pip install .
 
-Testing whether BRAID has been installed successfully：
+**To verify the installation was successful, run:**
 > braid test
 
 ## Usage
@@ -119,7 +124,6 @@ Example View:
 | **insertion** | An insertion of one or more nucleotides that alters the coding sequence and may affect the resulting protein sequence. |
 | **deletion** | A deletion of one or more nucleotides from the coding sequence, potentially altering the protein sequence or reading frame. |
 | **complex_indel** | A combined insertion and deletion event that cannot be represented as a simple insertion or deletion and may cause complex changes to the coding sequence. |
-| **complex_indel** | A splicing event in which one or more exons are completely skipped in the transcript, leading to an altered mRNA and protein sequence. |
 | **exon_skip** | A splicing event in which one or more exons are completely skipped in the transcript, leading to an altered mRNA and protein sequence. |
 | **skipped_exons_detail** | Detailed information specifying which exon is skipped in the exon-skipping event, SITE_PRESERVED, SITE_SHIFT, SITE_DESTROYED. e.g., SkippedExon:[1:51-77`\|`SITE_SHIFT]. |
 | **intron_retention** | A splicing event in which one or more introns are retained in the mature transcript, potentially disrupting the coding sequence. |
