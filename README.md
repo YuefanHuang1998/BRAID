@@ -34,7 +34,7 @@ BRAID is a software that requires standard bioinformatics libraries.
 
 **Dowload via pip**
 > ```
-> pip install braid
+> pip install pybraid
 > ```
 
 **Dowload via conda**
