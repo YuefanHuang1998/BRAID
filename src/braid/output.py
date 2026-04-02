@@ -5,6 +5,7 @@ from .genome import GenomeProcessor
 from .vcf import VCFProcessor
 from .modifier import SequenceModifier 
 from .protein import ProteinAnalyzer
+from .utils import reverse_complement
 
 class ResultsOutputter:
     VARIANT_SCHEMA = [
