@@ -54,7 +54,7 @@ def main(args_list=None):
     parser.add_argument('--ignore-intron', action='store_true', help='Ignore mutations marked only as intron.')
     parser.add_argument('-s', '--sample', help='Path to file with specific sample IDs to analyze (one per line, no header).')
     parser.add_argument('--gene', help='Path to file with specific gene IDs to analyze (one per line, no header).') 
-    parser.add_argument('--lof-threshold', type=float, default=0.30, help="LOF classification threshold.")
+    parser.add_argument('--lof-threshold', type=float, default=0.20, help="LOF classification threshold.")
     parser.add_argument('--resume', action='store_true', help='Resume from the last successfully processed gene found in the log.')
     parser.add_argument('--version', nargs=0, action=FancyVersionAction, help='Show advanced version and environment information.')
 
