@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "BRAID"
-version = "1.0.0"
+version = "1.0.3"
 description = "Block Resolution and Annotation of Integrated DNA"
 authors = [
   { name = "Yuefan Huang" },
