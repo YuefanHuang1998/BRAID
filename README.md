@@ -84,7 +84,7 @@ BRAID is a software that requires standard bioinformatics libraries.
 | **-o** | **--output** | Output file name (default: variant_analysis_output.tsv). | Optional |
 | **-s** | **--sample** | Path to file containing specific sample IDs to analyze (one per line, no header). | Optional |
 |  | **--gene** | Path to file with specific gene IDs to analyze (one per line, no header). | Optional |
-|  | **--lof-threshold** | Custom threshold for Loss-of-Function classification (e.g., 0.1; default: 0.3). | Optional |
+|  | **--lof-threshold** | Custom threshold for Loss-of-Function classification (e.g., 0.1; default: 0.2). | Optional |
 |  | **--force-unphased** | Skip phasing check (forces run on unphased VCF). | Optional |
 |  | **--ignore-intron** | Ignore variants marked strictly as intronic. | Optional |
 
