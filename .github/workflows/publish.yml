@@ -1,4 +1,4 @@
-name: pybraid
+name: Publish to PyPI
 
 on:
   release:
